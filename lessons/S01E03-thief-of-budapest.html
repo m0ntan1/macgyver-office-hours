@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S01E03 — Thief of Budapest | MacGyver Office Hours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Merriweather:wght@400;700;900&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blueprint: #0d1b2a;
+  --blueprint-mid: #1b2838;
+  --copper: #c87533;
+  --copper-bright: #e8943b;
+  --copper-dim: #8a5a2a;
+  --steel: #8899aa;
+  --chalk: #d4dce6;
+  --chalk-dim: rgba(212, 220, 230, 0.6);
+  --white: #f0f4f8;
+  --green-pass: #4caf50;
+  --red-fail: #c0392b;
+  --yellow-plausible: #d4a017;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Source Sans Pro', system-ui, -apple-system, sans-serif;
+  background: var(--blueprint);
+  color: var(--chalk);
+  line-height: 1.7;
+  padding: 2rem;
+  max-width: 820px;
+  margin: 0 auto;
+}
+header { border-bottom: 1px solid rgba(200, 117, 51, 0.25); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+.ep-num {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.7rem; letter-spacing: 0.15em; color: var(--copper); text-transform: uppercase;
+}
+h1 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.8rem; color: var(--white); margin: 0.5rem 0 0.75rem;
+}
+.brief { color: var(--chalk-dim); font-style: italic; }
+.lesson-plan { margin-top: 1.5rem; }
+.lesson-plan-header {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em;
+  color: var(--copper); text-transform: uppercase;
+  margin-bottom: 0.75rem; padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(200, 117, 51, 0.15);
+}
+.lesson-row {
+  display: grid; grid-template-columns: 90px 1fr; gap: 1rem;
+  padding: 0.6rem 0; border-bottom: 1px solid rgba(136, 153, 170, 0.08);
+  align-items: baseline;
+}
+.lesson-row:last-child { border-bottom: none; }
+.lesson-time {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.75rem; font-weight: 700; color: var(--copper);
+}
+.lesson-desc strong { color: var(--white); }
+.time-hack {
+  display: grid; grid-template-columns: 90px 1fr auto; gap: 1rem;
+  padding: 0.75rem; margin: 0.5rem 0;
+  background: rgba(13, 27, 42, 0.6); border-left: 3px solid var(--copper);
+  align-items: center;
+}
+.time-hack-stamp { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.8rem; font-weight: 700; color: var(--copper-bright); }
+.time-hack-desc { font-size: 0.95rem; }
+.time-hack-verdict {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em;
+  padding: 0.2rem 0.5rem; text-transform: uppercase;
+}
+.time-hack-verdict.pass { border: 1px solid var(--green-pass); color: var(--green-pass); }
+.time-hack-verdict.fail { border: 1px solid var(--red-fail); color: var(--red-fail); }
+.time-hack-verdict.plausible { border: 1px solid var(--yellow-plausible); color: var(--yellow-plausible); }
+.lesson-standards { margin-top: 1.5rem; padding-top: 0.75rem; border-top: 1px solid rgba(136, 153, 170, 0.1); }
+.lesson-standards-label {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em;
+  color: var(--steel); text-transform: uppercase; margin-bottom: 0.5rem;
+}
+.standard-tag {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.65rem; font-weight: 700;
+  padding: 0.2rem 0.5rem; margin: 0.15rem 0.25rem 0.15rem 0;
+  border: 1px solid var(--steel); color: var(--steel);
+}
+.themes { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin-top: 1rem; }
+.theme-card {
+  background: rgba(13, 27, 42, 0.5);
+  border: 1px solid rgba(136, 153, 170, 0.1); padding: 1rem;
+}
+.theme-card h4 { font-family: 'Merriweather', Georgia, serif; font-size: 1rem; color: var(--white); margin-bottom: 0.4rem; }
+.theme-card p { font-size: 0.9rem; color: var(--chalk-dim); }
+footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(136, 153, 170, 0.1); font-size: 0.8rem; color: var(--chalk-dim); }
+footer a { color: var(--copper); text-decoration: none; }
+</style>
+</head><body>
+<header>
+<div class="ep-num">S01E03</div>
+<h1>Thief of Budapest</h1>
+<p class="brief">MacGyver must retrieve microfilm hidden in a watch while being hunted by a gypsy thief and Cold War operatives.</p>
+</header>
+<section class="lesson-plan">
+<div class="lesson-plan-header">Lesson Plan: Optics & Refraction</div>
+<div class="lesson-row">
+<span class="lesson-time">10 min</span>
+<span class="lesson-desc"><strong>Hook: Watch the water-glass lens hack.</strong> Discuss how magnification occurs without ground glass or ground lenses.</span>
+</div>
+<div class="lesson-row">
+<span class="lesson-time">12 min</span>
+<span class="lesson-desc"><strong>Hands-On: Build a Water Lens.</strong> Students fill a balloon or clear cup with water, place text underneath, measure magnification factor.</span>
+</div>
+<div class="lesson-row">
+<span class="lesson-time">12 min</span>
+<span class="lesson-desc"><strong>Theory: Refractive Index &amp; Focal Length.</strong> Introduce Snell's law (n₁sin(θ₁) = n₂sin(θ₂)) and lens equation (1/f = (n-1)(1/R₁ - 1/R₂)).</span>
+</div>
+<div class="lesson-row">
+<span class="lesson-time">13 min</span>
+<span class="lesson-desc"><strong>Demo: EM Jamming &amp; Reflection.</strong> Use aluminum foil as a Faraday cage around a radio. Show how metallic surfaces scatter radio waves.</span>
+</div>
+<div class="lesson-row">
+<span class="lesson-time">8 min</span>
+<span class="lesson-desc"><strong>Chemistry Reality Check:</strong> Discuss why the bomb hack fails. What would be needed for actual detonation? (Oxidizer, fuel, confinement, initiation energy.)</span>
+</div>
+<div class="lesson-row">
+<span class="lesson-time">5 min</span>
+<span class="lesson-desc"><strong>Wrap-up:</strong> Why is stoichiometry important? Real chemistry vs. movie chemistry.</span>
+</div>
+</section>
+<section class="lesson-plan">
+<div class="lesson-plan-header">Time Hacks — Clips to Show in Class</div>
+<div class="time-hack">
+<span class="time-hack-stamp">~07:30</span>
+<span class="time-hack-desc">Lightbulb tire deflation setup</span>
+<span class="time-hack-verdict plausible">PLAUSIBLE</span>
+</div>
+<div class="time-hack">
+<span class="time-hack-stamp">~18:20</span>
+<span class="time-hack-desc">Water glass magnifying lens improvisation</span>
+<span class="time-hack-verdict pass">CONFIRMED</span>
+</div>
+<div class="time-hack">
+<span class="time-hack-stamp">~29:45</span>
+<span class="time-hack-desc">Chemical bomb preparation and detonation</span>
+<span class="time-hack-verdict fail">BUSTED</span>
+</div>
+<div class="time-hack">
+<span class="time-hack-stamp">~35:10</span>
+<span class="time-hack-desc">Balloon RF jamming deployment</span>
+<span class="time-hack-verdict plausible">PLAUSIBLE</span>
+</div>
+</section>
+<section class="lesson-standards">
+<div class="lesson-standards-label">Aligned Standards</div>
+<span class="standard-tag">NGSS PS4.B — Electromagnetic Radiation</span>
+<span class="standard-tag">NGSS PS1.B — Chemical Reactions</span>
+<span class="standard-tag">NGSS PS4.A — Wave Properties</span>
+</section>
+<section><div class="lesson-plan-header" style="margin-top:1.5rem">Themes</div>
+<div class="themes">
+<div class="theme-card"><h4>Optics as a Toolset</h4><p>Water, glass curvature, and refraction create magnification without manufactured optics—a recurring motif in spy work.</p></div>
+<div class="theme-card"><h4>When Chemistry Fails</h4><p>This episode demonstrates the limits of improvised chemistry. Not every combination of dangerous-sounding chemicals yields an explosive.</p></div>
+<div class="theme-card"><h4>Signal & Noise</h4><p>Jamming, misdirection, and chaff all manipulate information signals. Radio frequencies are invisible but follow predictable physics.</p></div>
+</div></section>
+<footer>Extracted from <a href="../index.html">index.html</a>. Regenerate with <code>python scripts/extract_lessons.py</code>.</footer>
+</body></html>
