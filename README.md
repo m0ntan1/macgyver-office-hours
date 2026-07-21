@@ -6,8 +6,8 @@
 
 This repo holds the one-page educator site ([`index.html`](index.html)) plus per-episode lesson plans you can download or hand to teachers without making them scroll through the whole site.
 
-macgyverofficehours.com
-
+[macgyverofficehours.com
+](https://macgyverofficehours.com/)
 ## Lesson Plans
 
 Season 1 has 10 plans available. Each plan includes the 60-minute schedule, timestamped clips to play in class, NGSS/CCSS standards alignment, and the episode's recurring themes.
